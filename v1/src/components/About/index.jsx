@@ -12,7 +12,7 @@ const About = () => {
         justifyContent: "center",
       }}
     >
-      <span>Hello stranger! 👋, My name is  </span>
+      <span>Hello stranger! 👋, My name is </span>
       <div className="nameHeader">
         <p>PAVAN</p>
         <p>PAVAN</p>
@@ -33,6 +33,12 @@ const About = () => {
         </div>
         <span>AWESOME!</span>
       </div>
+        <div className="scrolldown" style={{ color: "blue", position: "absolute",bottom: "20px"  }}>
+          <div className="chevrons">
+            <div className="chevrondown"></div>
+            <div className="chevrondown"></div>
+          </div>
+        </div>
     </div>
   );
 };

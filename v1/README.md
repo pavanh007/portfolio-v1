@@ -19,3 +19,5 @@ Currently, two official plugins are available:
 
 - https://codepen.io/markmead/pen/MqmOVB (CARD)
 - https://codepen.io/rauldronca/pen/mEXomp (FOR HEADING)
+
+- https://codepen.io/pavanh007/pen/OJqGrBq (PROJECT_CARD)

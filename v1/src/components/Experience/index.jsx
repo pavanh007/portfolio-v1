@@ -1,6 +1,33 @@
-import { Typography} from "antd"
-import "./index.css";
+import { Typography } from "antd";
+import { useEffect } from "react";
+import { Swiper } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import "./exp.scss";
+
+
 const Experience = () => {
+  useEffect(() => {
+    try {
+      const swiper = new Swiper(".blog-slider", {
+        spaceBetween: 30,
+        effect: "fade",
+        loop: true,
+        mousewheel: {
+          invert: false,
+        },
+        autoHeight: true,
+        pagination: {
+          el: ".blog-slider__pagination",
+          clickable: true,
+        },
+      });
+      return () => {
+        swiper.destroy();
+      };
+    } catch (error) {
+      console.error("Swiper initialization error:", error);
+    }
+  }, []);
   return (
     <div
       style={{
@@ -24,38 +51,7 @@ const Experience = () => {
           Experience
         </Typography.Title>
       </div>
-      <div className="outerDiv">
-        <div className="container">
-          <div className="card">
-            <div className="content">
-              <h2>01</h2>
-              <h3>Codemodulo Technologies</h3>
-              <p>Software Engineer</p>
-              <a href="#">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div className="container">
-          <div className="card">
-            <div className="content">
-              <h2>01</h2>
-              <h3>Vlinder Labs Pvt, Ltd</h3>
-              <p>Associate Software Engineer</p>
-              <a href="#">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div className="container">
-          <div className="card">
-            <div className="content">
-              <h2>01</h2>
-              <h3>Azure Skynet Solutions</h3>
-              <p>Intern</p>
-              <a href="#">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };

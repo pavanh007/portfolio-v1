@@ -6,10 +6,11 @@ const Work = () => {
     <div
       style={{
         backgroundColor: "white",
-        height: "80vh",
+        height: "100vh",
         width: "100vw",
         display: "flex",
         flexDirection: "column",
+        justifyContent: "center"
       }}
     >
       <div style={{ display: "flex" }}>
