@@ -6,57 +6,6 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 } 
-.text {
-      font-weight: 600;
-      letter-spacing: 1.7px;
-      text-transform: uppercase;
-      font-family: 'Inter';
-      font-size: 17px;
-      fill: #111;
-      text-shadow: 2px 0px #ccc;
-    }
-
-    #rotatingText {
-      animation-name: rotate-circle;
-      animation-duration: 10s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-    }
-
-    @keyframes rotate-circle {
-      to {
-        transform: rotate(1turn);
-      }
-    }
-
-  .main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  z-index: -1;
-}
-
-
-    .main img {
-      position: absolute;
-    }
-
-    .main img {
-      position: absolute;
-      animation-name: rotate-circle;
-      animation-direction: reverse;
-      animation-duration: 30s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-
-      filter: drop-shadow(0px 0px 5px #333);
-    }
-
-
 
 .nameHeader {
   display: grid;
@@ -64,6 +13,7 @@
   font-weight: 600;
   text-transform: uppercase;
   color: #070F2B;
+  
 }
 
 .nameHeader p{
@@ -301,4 +251,17 @@
   to {
     opacity: 0.5;
   }
+}
+
+
+.wrapper {
+  width: 900px;
+  margin: 20px auto;
+  z-index: -1;
+}
+
+.path {
+  fill: #aaa;
+  stroke: #ddd;
+  stroke-width: 0.5;
 }

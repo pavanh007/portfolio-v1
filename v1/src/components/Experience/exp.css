@@ -72,6 +72,7 @@
 .card_header_exp .title_exp {
   font-size: 30px;
   margin: .15rem 0 auto;
+  font-weight: 500;
   cursor: pointer;
   padding-top: 100;
 }

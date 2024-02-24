@@ -1,10 +1,10 @@
 
-.card {
+.card_p {
   border-radius: 16px;
   margin: 0;
   width: 500px;
   max-width: 20%;
-  max-height: 500px;
+  max-height: 600px;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 5px 8px 0px rgba(0, 0, 0, 0.14),
     0px 1px 14px 0px rgba(0, 0, 0, 0.12);
@@ -13,21 +13,19 @@
   background-size: cover;
 }
 
-.info {
+.info_p {
   position: relative;
-  border-radius: 10px;
   max-width: 100%;
   height: 400px;
   padding-left: 10px;
   background-color: #fff;
-  transform: translateY(100%) translateY(-50px) translateZ(0);
-  transition: transform 0.5s ease-out;
+  transform: translateY(100%) translateY(-70px) translateZ(0);
+  transition: transform 0.8s ease-out;
 }
 
-.info:before {
+.info_p:before {
   z-index: -1;
   display: block;
-  
   position: absolute;
   content: ' ';
   max-width: 100%;
@@ -41,12 +39,13 @@
   transition: transform 0.5s ease-out;
 }
 
-.card:hover .info,
-.card:hover .info:before {
+.card_p:hover .info_p,
+.card_p:hover .info_p:before {
   transform: translateY(0) translateZ(0);
+  border-radius: 10px;
 }
 
-.title {
+.title_p {
   margin: 0;
   padding: 24px;
   font-size: 40px;
@@ -54,7 +53,7 @@
   color: rgba(0, 0, 0, 0.87);
 }
 
-.description {
+.description_p {
   margin: 0;
   padding: 0 24px 24px;
   font-size: 16px;
@@ -62,23 +61,6 @@
 }
 
 
-
-header {
-  padding: 40px;
-  min-height: 180px;
-  text-align: center;
-  color: rgba(0, 0, 0, .87)
-}
-
-header>* {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto
-}
-
-header>:last-child {
-  margin-bottom: 0
-}
 
 h1 {
   margin-bottom: 0.5em;
@@ -95,7 +77,7 @@ h1 {
   }
 }
 
-.description {
+.description_p {
   margin-bottom: 1.3em;
   font-size: 16px;
   line-height: 1.618
@@ -108,7 +90,7 @@ h1 {
   }
 }
 
-.badges {
+.badges_p {
   display: flex;
   flex-direction:row;
   justify-content: flex-start;
@@ -119,7 +101,7 @@ h1 {
   // justify-content: center;
 }
 
-.badges>button {
+.badges_p>button {
   font-size: 0.875rem;
   line-height: 1.25rem;
   padding: 2px .5rem;
@@ -129,7 +111,7 @@ h1 {
   outline: none;
 }
 
-.badges .blue {
+.badges_p .blue_p {
   background-color: rgba(59, 130, 246, 0.10);
   color: rgb(59 130 246);
   border: 1px rgb(59 130 246) solid;
@@ -142,7 +124,7 @@ h1 {
 
 }
 
-.wrapper {
+.wrapper_p {
   display: inline-flex;
   list-style: none;
   height: 120px;
@@ -153,7 +135,7 @@ h1 {
   flex-wrap: wrap;
 }
 
-.wrapper .icon {
+.wrapper_p .icon_p {
   position: relative;
   background: #fff;
   border-radius: 50%;
@@ -167,24 +149,24 @@ h1 {
   flex-direction: column;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.wrapper .tooltip {
+.wrapper_p .tooltip_p {
   position: absolute;
   top: 0;
   font-size: 14px;
   background: #fff;
-  color: #fff;
+  color: #000;
   padding: 5px 8px;
   border-radius: 5px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.wrapper .tooltip::before {
+.wrapper_p .tooltip_p::before {
   position: absolute;
   content: "";
   height: 8px;
@@ -196,27 +178,27 @@ h1 {
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.wrapper .icon:hover .tooltip {
+.wrapper_p .icon_p:hover .tooltip_p {
   top: -45px;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
-.wrapper .icon:hover span,
-.wrapper .icon:hover .tooltip {
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+.wrapper_p .icon_p:hover span,
+.wrapper_p .icon_p:hover .tooltip_p {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 1);
 }
 
-.wrapper svg {
+.wrapper_p svg {
   fill: green;
 }
 
-.wrapper span:hover,
-.wrapper svg:hover,
-.wrapper .black:hover,
-.wrapper .black:hover .tooltip,
-.wrapper .black:hover .tooltip::before {
+.wrapper_p span:hover,
+.wrapper_p svg:hover,
+.wrapper_p .black:hover,
+.wrapper_p .black:hover .tooltip,
+.wrapper_p .black:hover .tooltip::before {
   background: #222;
   color: white;
   fill: white;
