@@ -1,5 +1,5 @@
 @mixin white-gradient {
-  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 80%);
 }
 
 $animationSpeed: 30s;
@@ -52,17 +52,23 @@ $animationSpeed: 30s;
     width: calc(250px * 14);
   }
 
-  .slide {
-    height: 200px;
-    width: 250px;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 2px;
-    margin: 4px;
+  
+}
+
+.slide {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 2px;
+  margin: 4px;
+  
+  &:hover {
+  background-color: #008170;
   }
 }
 

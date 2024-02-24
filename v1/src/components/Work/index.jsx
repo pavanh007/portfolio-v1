@@ -36,7 +36,9 @@ const Work = () => {
         }}
       >
         <div className="slider">
+          
           <div className="slide-track">
+
             <div className="slide">
               <a href="https://imgbb.com/">
                 <img
