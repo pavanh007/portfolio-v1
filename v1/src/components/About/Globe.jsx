@@ -13,6 +13,12 @@ const Globe = () => {
 
     // Create chart instance
     let chart = am4core.create("chartdiv", am4maps.MapChart);
+    if (chart.logo) {
+      chart.logo.disabled = true
+    }
+    chart.seriesContainer.draggable = false;
+    chart.seriesContainer.resizable = false;
+    chart.maxZoomLevel = 1;
 
     // Set map definition
     chart.geodata = am4geodata_worldLow;
@@ -20,10 +26,11 @@ const Globe = () => {
     // Set projection
     chart.projection = new am4maps.projections.Orthographic();
     chart.panBehavior = "rotateLongLat";
-    chart.deltaLatitude = 9.5937;
+    chart.deltaLatitude = 20.5937;
     chart.deltaLongitude = -78.9629;
     chart.padding(20, 20, 20, 20);
 
+    
     // Create map polygon series
     let polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
 
@@ -32,7 +39,7 @@ const Globe = () => {
 
     // Configure series
     let polygonTemplate = polygonSeries.mapPolygons.template;
-    polygonTemplate.tooltipText = "India"; // Use {name} to display country names
+    polygonTemplate.tooltipText = "{name}"; 
     polygonTemplate.stroke = am4core.color("#000033");
     polygonTemplate.strokeWidth = 0.3;
     polygonTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
@@ -47,15 +54,13 @@ const Globe = () => {
         target.dataItem.dataContext.name === "India"
       ) {
         // Define the colors of the Indian flag
-        var saffron = am4core.color("#FF9933");
-        var white = am4core.color("#FFFFFF");
-        var green = am4core.color("#138808");
+        var saffron = am4core.color("#497174");
+      
 
         // Create a gradient for the flag colors
         var gradient = new am4core.LinearGradient();
         gradient.addColor(saffron, 0.96);
-        gradient.addColor(white, 0.16);
-        gradient.addColor(green, 0.5);
+        
 
         return gradient;
       }
@@ -63,13 +68,13 @@ const Globe = () => {
     });
 
     let graticuleSeries = chart.series.push(new am4maps.GraticuleSeries());
-    graticuleSeries.mapLines.template.line.stroke = am4core.color("#fff");
+    graticuleSeries.mapLines.template.line.stroke = am4core.color("#D6E4E5");
     graticuleSeries.mapLines.template.line.strokeOpacity = 0.08;
     graticuleSeries.fitExtent = false;
 
     chart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 0.1;
     chart.backgroundSeries.mapPolygons.template.polygon.fill =
-      am4core.color("#000");
+      am4core.color("#0391d2");
 
     // Increase rotation speed
     chart.deltaLongitude = 20; // You can adjust this value to increase or decrease the rotation speed
@@ -89,26 +94,44 @@ const Globe = () => {
     chart.seriesContainer.events.on("down", function () {
       //  animation.stop();
     });
+        chart.seriesContainer.events.on("down", () => {
+          //  animation.stop();
+        });
+
+        // Prevent zooming in and out by handling mousewheel event
+        const handleMouseWheel = (event) => {
+          event.preventDefault();
+        };
+
+        const chartContainer = document.getElementById("chartdivOuter");
+        chartContainer.addEventListener("mousewheel", handleMouseWheel);
 
     // Cleanup when the component unmounts
     return () => {
       chart.dispose();
+      chartContainer.removeEventListener("mousewheel", handleMouseWheel);
     };
   }, []);
 
   return (
-    <div style={{ backgroundColor: "gray", alignSelf: "center" }}>
+    <div
+      style={{
+        alignSelf: "center",
+        width: "60vh",
+      }}
+      id="chartdivOuter"
+    >
       <div
         id="chartdiv"
         style={{
-          width: "100vw",
-          height: "90vh",
-          backgroundColor: "#fff",
-          position: "absolute",
+          width: "50vw",
+          height: "60vh",
+          borderRadius: "50%",
           alignSelf: "center",
-          top: 50,
+          top: 70,
           left: 0,
-          zIndex: -1,
+          zIndex: 10,
+         
         }}
       ></div>
     </div>

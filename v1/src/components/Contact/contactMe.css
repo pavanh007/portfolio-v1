@@ -1,0 +1,107 @@
+
+  
+ 
+ .hero-wrapper {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero{
+  position: relative;
+    display: flex;
+    z-index: -10;
+    top: -50;
+    width: 80%;
+    align-self: center;
+    align-items: center;
+      clip-path: rect(5px 5px 30px 45px round 10%);
+  }
+
+  .intrest_in_box {
+    z-index: 5;
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .intrest_in{
+    font-size: 60px;
+    color: rgb(0, 0, 0, 0.7);
+    width: 50%;
+      display: flex;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    
+  }
+  canvas {
+    width: 80vw;
+    height:30vw;
+    border-radius: 20px;
+    display: flex;
+  }
+
+  
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+
+
+
+.social_links {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.social_links a {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+  color: rgb(0, 0, 0, 0.7);
+  /* box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05); */
+  border-radius: 10%;
+
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.social_links a .fab {
+  font-size: 20px;
+  line-height: 40px;
+  position: relative;
+  z-index: 10;
+  transition: color 0.5s;
+  
+}
+
+.social_links a::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: -90px;
+  left: 0;
+  background: #000;
+  background: linear-gradient(-45deg, #ed1c94, #ffec17);
+  position: absolute;
+  transition: 0.5s;
+}
+
+.social_links a:hover::after {
+  top: 0;
+}
+
+.social_links a:hover .fab {
+  color: #fff;
+}
+
+.social-links a:hover {
+  transform: translateY(-10px);
+}

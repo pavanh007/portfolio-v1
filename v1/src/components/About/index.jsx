@@ -1,63 +1,79 @@
 import React, { useEffect, useState } from "react";
 import Globe from "./Globe";
 
-import "./index.css"; 
-
+import "./about.css";
 
 const About = () => {
-
   return (
-    <div
-      style={{
-        position: "relative",
-        // zIndex: 1,
-      }}
-    >
-      <Globe />
+    <div style={{ height: "100vh" }}>
       <div
         style={{
-          backgroundColor: "transparent",
-          height: "100vh",
-          width: "100vw",
           display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          display: "flex",
-
-          position: "relative",
-          zIndex: 2,
+          flexDirection: "row",
         }}
       >
-        <span>Hello stranger! 👋, My name is </span>
-        <div className="nameHeader">
-          <p>PAVAN</p>
-          <p>PAVAN</p>
-        </div>
-        <div className="reveal">FULL STACK DEVELOPER</div>
-        <div id="container">
-          <span>I CAN</span>
-          <div id="flip">
-            <div>
-              <div>DEVELOP</div>
-            </div>
-            <div>
-              <div>DESIGN</div>
-            </div>
-            <div>
-              <div>DEPLOY</div>
+        <div className="gradient_bg"></div>
+
+        <div
+          style={{
+            backgroundColor: "transparent",
+            height: "100vh",
+            width: "50vw",
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              width: "50%",
+              margin: "auto",
+              alignContent: "center",
+              justifyContent: "center",
+              alignSelf: "center",
+              flexWrap: "wrap",
+              padding: "20px",
+            }}
+          >
+            <h2 className="greet_name">Hello stranger! 👋,My name is</h2>
+            <h1 className="my_name">Pavan</h1>
+
+            <p
+              className="reveal"
+              style={{
+                overflowWrap: "break-word",
+                wordWrap: "break-word",
+                fontWeight: 200,
+              }}
+            >
+              I'm a full stack developer from India 🇮🇳. I believe we design can
+              be more diverse and inspiring. With the mission to present the
+              possibilities of web design.
+            </p>
+            <div id="container">
+              <span>I CAN</span>
+              <div id="flip">
+                <div>
+                  <div className="develop">&nbsp;DEVELOP&nbsp;</div>
+                </div>
+                <div>
+                  <div className="design">DESIGN</div>
+                </div>
+                <div>
+                  <div className="deploy">DEPLOY</div>
+                </div>
+              </div>
+              <span>AWESOME!</span>
             </div>
           </div>
-          <span>AWESOME!</span>
         </div>
-        <div
-          className="scrolldown"
-          style={{ color: "blue", position: "absolute", bottom: "20px" }}
-        ></div>
+        <Globe />
       </div>
-      <div className="chevrons">
-        <div className="chevrondown"></div>
-        <div className="chevrondown"></div>
+      <div className="scrolldown">
+        <div className="chevrons">
+          <div className="chevrondown"></div>
+          <div className="chevrondown"></div>
+        </div>
       </div>
     </div>
   );

@@ -5,27 +5,55 @@ const Work = () => {
   return (
     <div
       style={{
-        backgroundColor: "white",
+        backgroundColor: "rgb(0, 0, 0, 0.05)",
         height: "100vh",
         width: "100vw",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center"
+        justifyContent: "center",
       }}
     >
-      <div style={{ display: "flex" }}>
-        <Typography.Title
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignSelf: "center",
+          justifyContent: "center",
+          
+        }}
+      >
+        <h1
           style={{
-            fontSize: 110,
-            marginBottom: 0,
+            fontSize: 80,
+            marginBottom: 40,
             marginLeft: 30,
-            fontWeight: 800,
-            width: 1200,
+            fontWeight: 900,
+            padding: 10,
+            width: "80vw",
+            textAlign: "center",
           }}
           className="workHeader"
         >
           Turning ideas into real life products is my calling.
-        </Typography.Title>
+        </h1>
+        <h1
+          style={{
+            fontSize: 18,
+            marginBottom: 0,
+            marginLeft: 30,
+            fontWeight: 200,
+            alignSelf: "center",
+            padding: 10,
+            width: "40vw",
+            textAlign: "center",
+          }}
+          // className="workHeader"
+        >
+          Technological advancements lead to improvements in design. I aim to
+          transform designs into pixel-perfect UIs and easy-to-manage web
+          experiences. I always leverage the latest technologies to create the
+          best user experiences.
+        </h1>
       </div>
       <div
         style={{
@@ -36,9 +64,7 @@ const Work = () => {
         }}
       >
         <div className="slider">
-          
           <div className="slide-track">
-
             <div className="slide">
               <a href="https://imgbb.com/">
                 <img
@@ -218,11 +244,44 @@ const Work = () => {
                 />
               </a>
             </div>
-        
+
             <div className="slide">
               <a href="https://imgbb.com/">
                 <img
                   src="https://i.ibb.co/34kHWpW/9117976-graphql-fill-icon.png"
+                  alt="Postgre-SQL"
+                  height="60"
+                  width="60"
+                  border="0"
+                />
+              </a>
+            </div>
+            <div className="slide">
+              <a href="https://imgbb.com/">
+                <img
+                  src="https://i.ibb.co/MMCfCdS/4691529-npm-icon.png"
+                  alt="Postgre-SQL"
+                  height="60"
+                  width="60"
+                  border="0"
+                />
+              </a>
+            </div>
+            <div className="slide">
+              <a href="https://imgbb.com/">
+                <img
+                  src="https://i.ibb.co/cwrRmJQ/4691251-yarn-icon.png"
+                  alt="Postgre-SQL"
+                  height="60"
+                  width="60"
+                  border="0"
+                />
+              </a>
+            </div>
+            <div className="slide">
+              <a href="https://imgbb.com/">
+                <img
+                  src="https://i.ibb.co/wN3M06m/4691301-kubernetes-icon.png"
                   alt="Postgre-SQL"
                   height="60"
                   width="60"
@@ -238,4 +297,3 @@ const Work = () => {
 };
 
 export default Work;
-

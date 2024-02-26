@@ -10,23 +10,34 @@ const Project = () => {
         width: "100vw",
       }}
     >
-      <div style={{ display: "flex", justifyContent: "center", zIndex: -1 }}>
-        <Typography.Title
-          style={{
-            fontSize: 120,
-            marginBottom: 30,
-            marginTop: 50,
-            fontWeight: 800,
-            marginLeft: 30,
-
-            background: "-webkit-linear-gradient(#1B1A55, #535C91)",
-            "-webkit-background-clip": "text",
-            "-webkit-text-fill-color": "transparent",
-          }}
-          className="hover-underline-animation_p"
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          paddingTop: "100px",
+        }}
+      >
+        <h1 className="selection_work"
         >
-          projects
-        </Typography.Title>
+          A small selection of my work
+        </h1>
+        <h1
+          style={{
+            fontSize: 18,
+            marginBottom: 0,
+            marginLeft: 30,
+            fontWeight: 200,
+            alignSelf: "center",
+            padding: 10,
+            width: "40vw",
+            textAlign: "center",
+          }}
+          // className="workHeader"
+        >
+          Working on interesting and challenging projects that will definitely
+          help you advance your career.
+        </h1>
       </div>
       <div
         style={{
