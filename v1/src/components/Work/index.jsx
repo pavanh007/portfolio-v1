@@ -19,18 +19,18 @@ const Work = () => {
           flexDirection: "column",
           alignSelf: "center",
           justifyContent: "center",
-          
         }}
       >
         <h1
           style={{
-            fontSize: 80,
+            fontSize: 60,
             marginBottom: 40,
             marginLeft: 30,
-            fontWeight: 900,
+            fontWeight: 600,
             padding: 10,
-            width: "80vw",
+            width: "60vw",
             textAlign: "center",
+            fontFamily: "Poppins, sans-serif",
           }}
           className="workHeader"
         >
@@ -46,6 +46,7 @@ const Work = () => {
             padding: 10,
             width: "40vw",
             textAlign: "center",
+            fontFamily: "Poppins, sans-serif",
           }}
           // className="workHeader"
         >
@@ -283,6 +284,17 @@ const Work = () => {
                 <img
                   src="https://i.ibb.co/wN3M06m/4691301-kubernetes-icon.png"
                   alt="Postgre-SQL"
+                  height="60"
+                  width="60"
+                  border="0"
+                />
+              </a>
+            </div>
+            <div className="slide">
+              <a href="https://imgbb.com/">
+                <img
+                  src="https://i.ibb.co/kDJKkGN/4691529-npm-icon.png"
+                  alt="NPM"
                   height="60"
                   width="60"
                   border="0"

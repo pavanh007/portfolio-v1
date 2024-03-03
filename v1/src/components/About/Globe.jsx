@@ -4,7 +4,6 @@ import * as am4maps from "@amcharts/amcharts4/maps";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldLow";
 
-
 const Globe = () => {
   useEffect(() => {
     // Themes begin
@@ -14,7 +13,7 @@ const Globe = () => {
     // Create chart instance
     let chart = am4core.create("chartdiv", am4maps.MapChart);
     if (chart.logo) {
-      chart.logo.disabled = true
+      chart.logo.disabled = true;
     }
     chart.seriesContainer.draggable = false;
     chart.seriesContainer.resizable = false;
@@ -30,7 +29,6 @@ const Globe = () => {
     chart.deltaLongitude = -78.9629;
     chart.padding(20, 20, 20, 20);
 
-    
     // Create map polygon series
     let polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
 
@@ -39,7 +37,7 @@ const Globe = () => {
 
     // Configure series
     let polygonTemplate = polygonSeries.mapPolygons.template;
-    polygonTemplate.tooltipText = "{name}"; 
+    polygonTemplate.tooltipText = "{name}";
     polygonTemplate.stroke = am4core.color("#000033");
     polygonTemplate.strokeWidth = 0.3;
     polygonTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
@@ -55,12 +53,11 @@ const Globe = () => {
       ) {
         // Define the colors of the Indian flag
         var saffron = am4core.color("#497174");
-      
+        
 
         // Create a gradient for the flag colors
         var gradient = new am4core.LinearGradient();
         gradient.addColor(saffron, 0.96);
-        
 
         return gradient;
       }
@@ -94,17 +91,17 @@ const Globe = () => {
     chart.seriesContainer.events.on("down", function () {
       //  animation.stop();
     });
-        chart.seriesContainer.events.on("down", () => {
-          //  animation.stop();
-        });
+    chart.seriesContainer.events.on("down", () => {
+      //  animation.stop();
+    });
 
-        // Prevent zooming in and out by handling mousewheel event
-        const handleMouseWheel = (event) => {
-          event.preventDefault();
-        };
+    // Prevent zooming in and out by handling mousewheel event
+    const handleMouseWheel = (event) => {
+      event.preventDefault();
+    };
 
-        const chartContainer = document.getElementById("chartdivOuter");
-        chartContainer.addEventListener("mousewheel", handleMouseWheel);
+    const chartContainer = document.getElementById("chartdivOuter");
+    chartContainer.addEventListener("mousewheel", handleMouseWheel);
 
     // Cleanup when the component unmounts
     return () => {
@@ -131,7 +128,6 @@ const Globe = () => {
           top: 70,
           left: 0,
           zIndex: 10,
-         
         }}
       ></div>
     </div>

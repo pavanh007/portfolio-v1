@@ -43,28 +43,16 @@ const About = () => {
               style={{
                 overflowWrap: "break-word",
                 wordWrap: "break-word",
-                fontWeight: 200,
+                fontWeight: 400,
+                color: "rgb(255, 255, 255, 0.6)",
+                paddingLeft: "15px",
+                fontFamily: "Poppins, sans-serif",
               }}
             >
-              I'm a full stack developer from India 🇮🇳. I believe we design can
-              be more diverse and inspiring. With the mission to present the
+              I'm a full stack developer from India 🇮🇳. I believe design can be
+              more diverse and inspiring. With the mission to present the
               possibilities of web design.
             </p>
-            <div id="container">
-              <span>I CAN</span>
-              <div id="flip">
-                <div>
-                  <div className="develop">&nbsp;DEVELOP&nbsp;</div>
-                </div>
-                <div>
-                  <div className="design">DESIGN</div>
-                </div>
-                <div>
-                  <div className="deploy">DEPLOY</div>
-                </div>
-              </div>
-              <span>AWESOME!</span>
-            </div>
           </div>
         </div>
         <Globe />

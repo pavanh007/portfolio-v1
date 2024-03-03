@@ -16,8 +16,21 @@ Currently, two official plugins are available:
 - https://uiverse.io/Javierrocadev/chatty-stingray-29 (DOWNLOAD CV)
 - https://uiverse.io/Madflows/great-chipmunk-4 (CARD FOR PROJECT)
 
+- https://codepen.io/alvarotrigo/pen/NWvQObB (CARD EASE-OUT)
+- https://uiverse.io/Nawsome/unlucky-mayfly-5 (DOWNLOAD CV)
+
+- https://uiverse.io/Smit-Prajapati/soft-donkey-32 (THIN-LINE)
+
 
 - https://codepen.io/markmead/pen/MqmOVB (CARD)
 - https://codepen.io/rauldronca/pen/mEXomp (FOR HEADING)
 
-- https://codepen.io/pavanh007/pen/OJqGrBq (PROJECT_CARD)
+`
+
+
+- NICE TO HAVE
+- https://codepen.io/SunilSalaria/pen/Baxrexp(NUMBERS CARD)
+- https://codepen.io/pavanh007/pen/GRLKNPY (PROJECT_CARD)
+- https://codepen.io/jkantner/details/poLOzKY (mobile view navbar)
+- https://uiverse.io/kennyotsu/short-warthog-33 (BACKGROUND)
+- https://codepen.io/markmiro/pen/wbqMPa (EXPERIENCE)
