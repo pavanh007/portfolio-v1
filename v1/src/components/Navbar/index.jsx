@@ -42,12 +42,6 @@ const Navbar = () => {
           justifyContent: "center",
         }}
       >
-        <button className="button_name" data-text="Awesome">
-          <span className="actual-text-name">&nbsp;PAVAN.H&nbsp;</span>
-          <span aria-hidden="true" className="hover-text-name">
-            &nbsp;PAVAN.H&nbsp;
-          </span>
-        </button>
       </div>
       <div className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="outerLayer">

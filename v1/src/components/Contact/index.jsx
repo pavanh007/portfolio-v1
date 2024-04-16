@@ -23,36 +23,6 @@ const handleMouseMove = (e) => {
     btnRef_resume.current.style.setProperty("--x", x + "px");
     btnRef_resume.current.style.setProperty("--y", y + "px");
   };
-  useEffect(() => {
-    const c = canvasRef.current;
-    const $ = c.getContext('2d');
-
-    const col = (x, y, r, g, b) => {
-      $.fillStyle = `rgb(${r},${g},${b})`;
-      $.fillRect(x, y, 1, 1);
-    };
-
-    const R = (x, y, t) => Math.floor(192 + 64 * Math.cos((x * x - y * y) / 300 + t));
-    const G = (x, y, t) => Math.floor(192 + 64 * Math.sin((x * x * Math.cos(t / 4) + y * y * Math.sin(t / 3)) / 300));
-    const B = (x, y, t) => Math.floor(192 + 64 * Math.sin(5 * Math.sin(t / 9) + ((x - 100) * (x - 100) + (y - 100) * (y - 100)) / 1100));
-
-    let t = 0;
-    const fps = 60;
-    const run = () => {
-      for (let x = 0; x <= 35; x++) {
-        for (let y = 0; y <= 35; y++) {
-          col(x, y, R(x, y, t), G(x, y, t), B(x, y, t));
-        }
-      }
-      t += 0.05 / 1;
-
-      setTimeout(() => {
-        window.requestAnimationFrame(run);
-      }, 1000 / fps);
-    };
-
-    run();
-  }, []);
 
   return (
     <div
@@ -70,7 +40,7 @@ const handleMouseMove = (e) => {
           <h1 className="intrest_in">Interested in working together?</h1>
         </div>
         <div className="hero">
-          <canvas ref={canvasRef} width="33" height="30"></canvas>
+          <canvas  width="33" height="30"></canvas>
         </div>
       </div>
       <div
@@ -79,8 +49,8 @@ const handleMouseMove = (e) => {
           alignSelf: "center",
           flexDirection: "row",
           height: "30vh",
-          width: "64vw",
-          margin: 0,
+          width: "65vw",
+          margin: 10,
           justifyContent: "space-between",
           alignItems: "center",
         }}
@@ -113,6 +83,7 @@ const handleMouseMove = (e) => {
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
               display: "inline-block",
+              color: "#094f5a",
             }}
           >
             get in touch with me
@@ -233,6 +204,7 @@ const handleMouseMove = (e) => {
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
               display: "inline-block",
+              color: "#094f5a",
             }}
           >
             You can hire me

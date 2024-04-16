@@ -33,12 +33,13 @@ const Project = () => {
           alignItems: "center",
           justifyContent: "center",
           alignSelf: "center",
-          marginTop: "30vh"
+          marginTop: "30vh",
         }}
       >
         <div
           style={{
             width: "60vw",
+            
             alignContent: "center",
             display: "flex",
             alignItems: "center",

@@ -1,5 +1,5 @@
 
-   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+   /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); */
  
  .hero-wrapper {
   align-self: center;
@@ -20,18 +20,24 @@
   }
 
   .intrest_in_box {
-    z-index: 5;
     position: absolute;
-    width: 80%;
+    width: 65vw;
+    border-radius: 10px;
     height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
+    margin-bottom: 100px;
+
+    background: linear-gradient(315deg, #1B6B93 38%, #4FC0D0 68%);
+    animation: gradient 15s ease infinite;
   }
   .intrest_in{
-    font-size: 70px;
+    font-size: 90px;
     color: rgb(255, 255, 255, 2);
-    width: 50%;
+    width: 50vw; 
+    color: #fff;
     display: flex;
     align-self: center;
     text-align: center;
@@ -48,7 +54,6 @@
   
 
  
-
 .social_links {
   display: flex;
   width: 50%;
@@ -86,7 +91,7 @@
   top: -90px;
   left: 0;
   background: #000;
-  background: linear-gradient(-45deg, #BC6FF1, #000000);
+  background: linear-gradient(-45deg, #4FC0D0, #000000);
   position: absolute;
   transition: 0.2s;
 }
@@ -108,7 +113,7 @@
 .continue-application {
   --color: #fff;
   --background: rgb(0, 0, 0, 0.5);
-  --background-hover: #BC6FF1;
+  --background-hover: #0c95a9;
   --background-left: rgb(0, 0, 0, 0.5);
   --folder: #F3E9CB;
   --folder-inner: #BEB393;
@@ -116,9 +121,9 @@
   --paper-lines: #BBC1E1;
   --paper-behind: #E1E6F9;
   --pencil-cap: #fff;
-  --pencil-top: #275EFE;
+  --pencil-top: #0c95a9;
   --pencil-middle: #fff;
-  --pencil-bottom: #5C86FF;
+  --pencil-bottom: #0c95a9;
   --shadow: rgb(0, 0, 0, 0.5);
   border: none;
   outline: none;
@@ -354,7 +359,7 @@
   top: var(--y);
   width: var(--size);
   height: var(--size);
-  background: radial-gradient(circle closest-side, #BC6FF1, #5C86FF, transparent);
+  background: radial-gradient(circle closest-side, #4FC0D0, #4FC0D0, transparent);
   transform: translate(-50%, -50%);
   transition: width 0.2s ease, height 0.2s ease;
 }
@@ -390,7 +395,7 @@
   top: var(--y);
   width: var(--size);
   height: var(--size);
-  background: radial-gradient(circle closest-side, #5C86FF, #BC6FF1, transparent);
+  background: radial-gradient(circle closest-side, #4FC0D0, #4FC0D0, transparent);
   transform: translate(-50%, -50%);
   transition: width 0.2s ease, height 0.2s ease;
 }

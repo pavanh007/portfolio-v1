@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Globe from "./Globe";
-
 import "./about.css";
 
 const About = () => {
   return (
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "100vh", width: "100vw" }}>
       <div
         style={{
           display: "flex",
@@ -13,7 +12,6 @@ const About = () => {
         }}
       >
         <div className="gradient_bg"></div>
-
         <div
           style={{
             backgroundColor: "transparent",
@@ -35,7 +33,6 @@ const About = () => {
               padding: "20px",
             }}
           >
-            <h2 className="greet_name">Hello stranger! 👋,My name is</h2>
             <h1 className="my_name">Pavan</h1>
 
             <p
@@ -44,7 +41,7 @@ const About = () => {
                 overflowWrap: "break-word",
                 wordWrap: "break-word",
                 fontWeight: 400,
-                color: "rgb(255, 255, 255, 0.6)",
+                color: "rgb(0, 0, 0, 0.8)",
                 paddingLeft: "15px",
                 fontFamily: "Poppins, sans-serif",
               }}

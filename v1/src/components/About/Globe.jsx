@@ -66,19 +66,19 @@ const Globe = () => {
 
     let graticuleSeries = chart.series.push(new am4maps.GraticuleSeries());
     graticuleSeries.mapLines.template.line.stroke = am4core.color("#D6E4E5");
-    graticuleSeries.mapLines.template.line.strokeOpacity = 0.08;
+    graticuleSeries.mapLines.template.line.strokeOpacity = 0.00;
     graticuleSeries.fitExtent = false;
 
-    chart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 0.1;
+    chart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 0.5;
     chart.backgroundSeries.mapPolygons.template.polygon.fill =
-      am4core.color("#0391d2");
+      am4core.color("#145c7d");
 
     // Increase rotation speed
     chart.deltaLongitude = 20; // You can adjust this value to increase or decrease the rotation speed
 
     // Create hover state and set alternative fill color
     let hs = polygonTemplate.states.create("hover");
-    hs.properties.fill = chart.colors.getIndex(0).brighten(-0.5);
+    // hs.properties.fill = chart.colors.getIndex(0).brighten(-0.5);
 
     let animation;
     setTimeout(function () {

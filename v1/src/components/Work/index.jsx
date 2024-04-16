@@ -3,16 +3,7 @@ import "./index.scss"
 
 const Work = () => {
   return (
-    <div
-      style={{
-        backgroundColor: "rgb(0, 0, 0, 0.05)",
-        height: "100vh",
-        width: "100vw",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-      }}
-    >
+    <div className="work_outer_layer">
       <div
         style={{
           display: "flex",
@@ -26,7 +17,7 @@ const Work = () => {
             fontSize: 60,
             marginBottom: 40,
             marginLeft: 30,
-            fontWeight: 600,
+            fontWeight: 800,
             padding: 10,
             width: "60vw",
             textAlign: "center",
@@ -41,14 +32,14 @@ const Work = () => {
             fontSize: 18,
             marginBottom: 0,
             marginLeft: 30,
-            fontWeight: 200,
+            fontWeight: 300,
             alignSelf: "center",
             padding: 10,
             width: "40vw",
             textAlign: "center",
             fontFamily: "Poppins, sans-serif",
+            fontWeight: 400,
           }}
-          // className="workHeader"
         >
           Technological advancements lead to improvements in design. I aim to
           transform designs into pixel-perfect UIs and easy-to-manage web
