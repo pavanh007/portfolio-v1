@@ -33,13 +33,13 @@ const Project = () => {
           alignItems: "center",
           justifyContent: "center",
           alignSelf: "center",
-          marginTop: "30vh",
+          marginTop: "20vh",
         }}
       >
         <div
           style={{
             width: "60vw",
-            
+
             alignContent: "center",
             display: "flex",
             alignItems: "center",
@@ -48,7 +48,8 @@ const Project = () => {
           }}
         >
           <h1 className={styles.selection_work}>
-            My workflow to make web application
+            If you're interested in collaborating with me, here's an overview of
+            my workflow for creating web applications.
           </h1>
         </div>
       </div>

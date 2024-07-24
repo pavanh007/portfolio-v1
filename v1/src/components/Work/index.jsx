@@ -180,17 +180,6 @@ const Work = () => {
                 />
               </a>
             </div>
-            <div className="slide">
-              <a href="https://imgbb.com/">
-                <img
-                  src="https://i.ibb.co/M62Y2Ln/211904-social-github-icon.png"
-                  alt="GitHub"
-                  height="100"
-                  width="100"
-                  border="0"
-                />
-              </a>
-            </div>
 
             <div className="slide">
               <a href="https://imgbb.com/">
